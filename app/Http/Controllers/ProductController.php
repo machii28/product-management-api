@@ -23,7 +23,7 @@ class ProductController extends Controller
         return ['images'];
     }
 
-    protected function afterStore(\Orion\Http\Requests\Request $request, Model $entity)
+    protected function afterStore(\Orion\Http\Requests\Request $request, Model $entity): void
     {
         $uploader = app(ImageUploader::class);
         $paths = [];
